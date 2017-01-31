@@ -1,0 +1,74 @@
+<div class="module_container">
+
+
+  <div class="title_module">
+
+    <span class="glyphicon glyphicon-education"></span>
+
+    <h3>~Programme~</h3>
+
+  </div>
+
+  <div class="module_grid">
+
+
+    <div class="grid_left module_list">
+
+
+      <div *ngIf="programme">
+        <div class="grid_post" *ngFor="let prog of programme;let i=index">
+
+          <div *ngIf="i<4">
+            <div class="grid_post_titre">
+              <span>{{ i+1 }}</span>
+              <h3>{{prog.titre}}</h3>
+            </div>
+
+            <div class="grid_post_data" *ngFor="let details of prog.details">
+              <p>
+                <span class="glyphicon glyphicon-ok"></span>
+                {{details}}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <div class="grid_right module_list">
+
+
+      <div *ngIf="programme">
+        <div class="grid_post" *ngFor="let prog of programme;let i=index">
+
+          <div *ngIf="i>3">
+            <div class="grid_post_titre">
+              <span>{{ i+1 }}</span>
+              <h3>{{prog.titre}}</h3>
+            </div>
+
+            <div class="grid_post_data" *ngFor="let details of prog.details">
+              <p>
+                <span class="glyphicon glyphicon-ok"></span>
+                {{details}}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,156 @@
+$primaryFont: 'Raleway';
+
+.module_tech {
+  width: 100%;
+  height: auto;
+  background-color: #00bcd4;
+  position: relative;
+  clear: both;
+  margin-bottom: 30px;
+
+  & .tech_tri {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FFF;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0px;
+  }
+  & .tech_tri_bottom {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+    position: absolute;
+    bottom: 0px;
+  }
+  & .module_tech_meta {
+    & span {
+      position: absolute;
+      top: 20px;
+      color: #FFF;
+      font-size: 30px;
+      z-index: 2;
+    }
+    & h3 {
+      position: absolute;
+      color: #FFF;
+      font-family: $primaryFont;
+      left: 36px;
+      top: 52px;
+      margin: 0;
+      z-index: 2;
+    }
+  }
+  & .module_tech_experience {
+    width: 1000px;
+    height: 532px;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+
+    & .item {
+      width: 120px;
+      height: 40px;
+      background-color: #FFF;
+      position: absolute;
+
+      & p {
+        text-align: center;
+        line-height: 38px
+      }
+    }
+    & #item_root {
+      left: 447px;
+      top: 10px;
+    }
+    & #item_php {
+      left: 199px;
+      top: 130px;
+    }
+    & #item_phyton {
+      left: 447px;
+      top: 130px;
+    }
+    & #item_js {
+      left: 705px;
+      top: 130px;
+    }
+    & #item_framework {
+      left: 279px;
+      top: 230px;
+    }
+    & #item_cms {
+      left: 115px;
+      top: 230px;
+    }
+    & #item_wordpress{
+      left: 115px;
+      top: 319px;
+    }
+    & #item_drupal {
+      left: 115px;
+      top: 373px;
+    }
+    & #item_magento {
+      left: 115px;
+      top: 426px;
+    }
+    & #item_zend {
+      left: 279px;
+      top: 319px;
+    }
+    & #item_symfony {
+      left: 279px;
+      top: 373px;
+    }
+    & #item_phyton_framework {
+      left: 447px;
+      top: 230px;
+    }
+    & #item_django {
+      left: 447px;
+      top: 319px;
+    }
+    & #item_web {
+      left: 619px;
+      top: 230px;
+    }
+    & #item_mobile {
+      left: 790px;
+      top: 230px;
+    }
+    & #item_phonegap {
+      left: 790px;
+      top: 319px;
+    }
+    & #item_cordova {
+      left: 790px;
+      top: 373px;
+    }
+    & #item_ionic {
+      left: 790px;
+      top: 425px;
+    }
+    & #item_ajax {
+      left: 619px;
+      top: 319px;
+    }
+    & #item_jquery {
+      left: 619px;
+      top: 373px;
+    }
+    & #item_angular {
+      left: 619px;
+      top: 477px;
+    }
+    & #item_nodejs {
+      left: 619px;
+      top: 425px;
+    }
+  }
+}

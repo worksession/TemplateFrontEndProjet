@@ -1,0 +1,67 @@
+$bgColor: #EFF6FE;
+$titleColor: #34495e;
+$primaryFont: 'Raleway';
+
+#formation_titre {
+	width: 1000px;
+	height: 60px;
+	margin: 100px auto 0 auto;
+	position: relative;
+	z-index: 2;
+
+	& span {
+		font-family: $primaryFont;
+		font-weight: bold;
+		color: #FFF;
+		font-size: 21px;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+}
+#presentation_container {
+	width: 1000px;
+	height: 130px;
+	margin: 0 auto 20px auto;
+	position: relative;
+	background-color: rgba(49, 112, 143, 0.42);
+	z-index: 2;
+	border-radius :  2px;
+
+	& div {
+		width: 500px;
+		height: 34px;
+		position: absolute;
+		top: 8px;
+		left: 4px;
+		z-index: 2;
+
+		& span {
+			position: absolute;
+			color: #FFF;
+			font-size: 30px;
+			left: 0px;
+			top: 0px
+		}
+		& h3 {
+			position: absolute;
+			color: #FFF;
+			font-family: $primaryFont;
+			left: 34px;
+			top: 0;
+			margin: 0
+		}
+	}
+	& p {
+		font-family: $primaryFont;
+		position: relative;
+		top: 38px;
+		padding: 0 10px 5px 41px;
+		color: #FFF;
+		font-size: 16px;
+		width: 100%;
+		line-height: 29px;
+	}
+
+	
+}

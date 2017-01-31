@@ -1,0 +1,39 @@
+$primaryFont: 'Raleway';
+
+.page_meta {
+  width: 1000px;
+  height: 43px;
+  position: relative;
+  margin : 50px auto 0 auto;
+
+  & ul {
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & li {
+      float: left;
+      position: relative;
+      margin-right: 6px;
+      font-family: $primaryFont;
+      font-size: 15px;
+    }
+    & li:first-child span {
+      color: #4CAF50;
+    }
+  }
+  & button {
+    width: 52px;
+    height: 19px;
+    text-align: center;
+    color: #FFF;
+    background-color: #ffc107;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    border: none;
+  }
+}

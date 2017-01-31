@@ -1,0 +1,10 @@
+<div class="page_meta">
+
+  <ul *ngIf="items">
+    <li><span class="glyphicon glyphicon-home"></span></li>
+    <li *ngFor="let item of items">/ {{ item }}</li>
+  </ul>
+
+  <button>PDF</button>
+
+</div>

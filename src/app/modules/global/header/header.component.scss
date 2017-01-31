@@ -1,0 +1,104 @@
+header {
+	width: 100%;
+	min-width: 1000px;
+	height: 56px;
+	background-color: #34495e;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+
+	& .header_container {
+		width: 1000px;
+		height: 56px;
+		position: relative;
+		margin: 0 auto;
+
+		& .logo {
+			position: absolute;
+			width: 120px;
+			height: 120px;
+			background-color: #34495e;
+			border-radius: 58px;
+			top: -51px;
+			left: 0;
+
+			& p {
+				font-family: 'Gloria Hallelujah', cursive;
+				color: #FFF;
+				position: absolute;
+				left: 25px;
+				top: 52px;
+				font-size: 49px
+			}
+		}
+		& nav {
+			width: auto;
+			position: absolute;
+			height: 30px;
+			top: 23px;
+			left: 110px;
+
+			& ul {
+				padding: 0;
+				list-style: none;
+
+				& li {
+					float: left;
+					position: relative;
+					cursor: pointer;
+					height: 30px;
+					margin-right: 20px;
+
+					& span {
+						font-family: 'Raleway', sans-serif;
+						color: #fff;
+						font-size: 17px;
+						width: 100%;
+						text-align: center;
+						white-space: nowrap;
+					}
+					& .menu_sep {
+						width: 1px;
+						height: 12px;
+						background-color: #fff;
+						position: absolute;
+						right: -11px;
+						top: 7px;
+					}
+				}
+			}
+		}
+		& .search_container {
+			width: 320px;
+			height: 30px;
+			position: absolute;
+			right: 0;
+			top: 13px;
+
+			& input[type="text"] {
+				width: 230px;
+				height: 30px;
+				border: none;
+				position: absolute;
+				left: 0;
+				top: 2px;
+				outline: none;
+				border-top-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				padding : 0 10px 0 10px;
+			}
+			& button {
+				background-color: #ecf0f1;
+				font-family: 'Raleway';
+				border: none;
+				position: absolute;
+				right: 0;
+				top: 2px;
+				padding: 5px;
+				border-top-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+		}
+	}
+}

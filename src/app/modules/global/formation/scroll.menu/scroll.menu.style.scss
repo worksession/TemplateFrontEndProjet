@@ -1,0 +1,36 @@
+.menu_icon {
+	width: 60px;
+	height: 200px;
+	border: 0px solid black;
+	position: fixed;
+	right: 30px;
+	bottom: 20px;
+	z-index: 6;
+
+	& ul {
+		list-style: none;
+		padding: 0;
+
+		& li {
+			margin-bottom: 5px;
+			cursor: pointer;
+			width: 35px;
+			height: 35px;
+			background-color: #ccc;
+			position: relative;
+			text-align: center;
+			overflow: hidden;
+
+			& span {
+				font-size: 23px;
+				color: #34495e;
+				margin: 0;
+				padding: 0;
+				left: 6px;
+				line-height: 36px;
+				position: absolute;
+				z-index: 2;
+			}
+		}
+	}
+}

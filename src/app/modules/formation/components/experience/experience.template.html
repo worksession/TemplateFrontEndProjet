@@ -1,0 +1,16 @@
+<div class="module_tech">
+
+  <div class="module_tech_meta">
+    <h3>~Experiences et technologies~</h3>
+    <span class="glyphicon glyphicon-blackboard"></span>
+  </div>
+  <div class="tech_tri"></div>
+  <div class="tech_tri_bottom"></div>
+  <div class="module_tech_experience">
+
+    <div *ngIf="experience">
+      <div id="{{ exp.html_id }}" class="item" *ngFor="let exp of experience"><p>{{ exp.titre }}</p></div>
+    </div>
+
+  </div>
+</div>
