@@ -1,13 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {ScrollMenuComponent} from './formation/scroll.menu/scroll.menu.component';
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import {AgmCoreModule} from 'angular2-google-maps/core';
 
 @NgModule({
-  declarations: [ 
-  HeaderComponent,FooterComponent,ScrollMenuComponent
+  declarations: [
+    HeaderComponent, FooterComponent, ScrollMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -15,7 +15,8 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
       apiKey: ''
     })
   ],
-  exports : [HeaderComponent,FooterComponent,ScrollMenuComponent],
+  exports: [HeaderComponent, FooterComponent, ScrollMenuComponent],
   providers: []
 })
-export class GlobalModule { }
+export class GlobalModule {
+}

@@ -8,19 +8,19 @@ import {FooterPosition} from './footer.position';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit{
- 
+
   footerPosition:FooterPosition;
   lat: number = 33.586084;
   lng: number = -7.609631;
-  
+
   constructor() {
   	this.footerPosition = new FooterPosition();
   }
 
     ngOnInit(): void {
-  
-     //  this.footerPosition.SetLiWidth();
-    
+
+       this.footerPosition.setPosition();
+
   }
- 
+
 }

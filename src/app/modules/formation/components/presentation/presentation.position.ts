@@ -2,20 +2,29 @@ declare var jQuery:any;
 
 
 export class PresentationPosition {
- 
 
 
- Center() : void {
+  public setPosition():void {
 
-     let PresentationWidth = jQuery("#presentation_container").width();
-     let TitreWidth = jQuery("#formation_titre").width()+10;
-     let ScreenWidth = jQuery(window).width();
-    
 
-        jQuery("#presentation_container").css("left",(ScreenWidth-PresentationWidth)/2+"px")
-        jQuery("#formation_titre").css("left",(ScreenWidth-TitreWidth)/2+"px")
+    this.centerTriangle();
 
-   
-} 
+  }
+
+
+  public centerTriangle() {
+
+    jQuery(function () {
+
+      let screen_width = jQuery(window).width();
+      let tri_width = jQuery(".tri_presentation").width()+20;
+
+      jQuery(".tri_presentation").css({
+        "left": (screen_width - tri_width) / 2 + "px"
+      });
+
+
+    });
+  }
 
 }

@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { FormationComponent } from './formation.component';
 import {PresentationComponent} from './components/presentation/presentation.component';
 import {ProgrammeComponent} from './components/programme/programme.component';
@@ -9,6 +7,7 @@ import {GlobalModule} from '../global/global.module';
 import {MetaDataComponent} from './components/metadata/metadata.component';
 import {ExperienceComponent} from './components/experience/experience.component';
 import {GroupeComponent} from './components/groupe/groupe.component';
+import {ExplodePipe} from './pipes/explode.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,8 @@ import {GroupeComponent} from './components/groupe/groupe.component';
     FormationComponent,
     ProgrammeComponent,
     ExperienceComponent,
-    GroupeComponent
+    GroupeComponent,
+    ExplodePipe
   ],
   imports: [
     BrowserModule,

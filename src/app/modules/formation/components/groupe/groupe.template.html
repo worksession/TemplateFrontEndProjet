@@ -1,4 +1,3 @@
-
 <div class="module_info">
 
   <div class="horraire_meta">
@@ -8,20 +7,27 @@
   </div>
 
   <div class="horraire_groupes">
-    <div class="horraire_groupe_a">
-      <h4><span class="glyphicon glyphicon-share-alt"></span> Groupe A</h4>
-      <p> -Samedi 9h00 - 12h00 </p><p> -Dimanche 14h00 - 16H15</p>
-    </div>
-    <div class="horraire_groupe_b">
-      <h4><span class="glyphicon glyphicon-share-alt"></span> Groupe A</h4>
-      <p> -Samedi 9h00 - 12h00 </p><p> -Dimanche 14h00 - 16H15</p>
-    </div>
-    <div class="horraire_duree">
-      <h4><span class="glyphicon glyphicon-hourglass"></span> Durée</h4>
-      <p> -La durée totale et de 12Mois</p>
+    <div class="groupes">
+      <table>
+        <thead>
+        <th><span class="glyphicon glyphicon-log-out"></span> Groupes</th><th>Seance 1</th><th>Seance 2</th><th>Durrée</th>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let groupe of groupes;let i=index">
+          <td>{{groupe.nom}}</td> <td *ngFor="let hr of groupe.seances">{{ hr }}</td>
+          <td *ngIf="i==0"rowspan="2">{{duree}}Mois</td>
+        </tr>
+
+        </tbody>
+      </table>
     </div>
 
-    <i> &nbsp;&nbsp;Nombre d'heures : 260 Heures</i>
+    <div class="duree">
+
+      <i>Nombre d'heures : {{nbheures}} Heures</i>
+
+    </div>
   </div>
 
 </div>

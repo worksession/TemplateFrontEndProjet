@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {FormationPosition} from './formation.position';
 import {FormationService} from '../../services/formation.service';
 import {ws} from '../../ws/ws.link';
-import {Transformer} from '../formation/utils/transformer';
 import {FormationModel} from './model/formation.model';
+import {Transformer} from './utils/transformer.utils';
+import {ExperienceDraw} from './utils/ExperienceDraw.utils';
 
 @Component({
   selector: 'template-formation',
@@ -16,8 +16,9 @@ import {FormationModel} from './model/formation.model';
 })
 export class FormationComponent implements OnInit {
 
-  private formationPosition:FormationPosition = new FormationPosition()
   private formationModel:FormationModel = new FormationModel();
+  private transformer:Transformer = new Transformer();
+  private experienceDraw:ExperienceDraw = new ExperienceDraw();
 
   constructor(private formationService:FormationService) {
   }
@@ -32,8 +33,10 @@ export class FormationComponent implements OnInit {
 
     this.formationService.getFormation(ws).subscribe(
       result => {
-
-        this.formationModel = Transformer.WSToObject(result);
+        this.formationModel = this.transformer.PrepareFormationModel(result);
+        this.experienceDraw.setItemStyle(this.formationModel.experience);
+        this.experienceDraw.draw(this.formationModel.experience);
+        this.experienceDraw.setGraphBackgroundHeight();
       },
       err => {
         console.log(err);

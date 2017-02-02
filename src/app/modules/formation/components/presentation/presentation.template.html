@@ -1,12 +1,15 @@
+<div class="bg">
+  <div class="tri_presentation"></div>
+</div>
 <div id="formation_titre">
-    <span  *ngIf="titre">{{ titre }}</span>
+  <span *ngIf="titre">{{ titre }}</span>
 </div>
 
 <div id="presentation_container">
-    <div>
-        <span class="glyphicon glyphicon-bookmark"></span>
-        <h3>Présentation</h3>
-    </div>
-    <p *ngIf="presentation"> {{ presentation }}</p>
+  <div>
+    <span class="glyphicon glyphicon-bookmark"></span>
+    <h3>Présentation</h3>
+  </div>
+  <p *ngIf="presentation"> {{ presentation }}</p>
 
 </div>

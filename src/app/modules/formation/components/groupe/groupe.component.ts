@@ -1,4 +1,6 @@
-import { ViewEncapsulation,Component,OnInit,Input } from '@angular/core';
+import {ViewEncapsulation, Component, OnInit, Input} from '@angular/core';
+import {Groupe} from '../../model/formation.model';
+import {GroupePosition} from './groupe.position';
 
 @Component({
   selector: 'groupe-component',
@@ -6,11 +8,22 @@ import { ViewEncapsulation,Component,OnInit,Input } from '@angular/core';
   styleUrls: ['./groupe.style.scss'],
   //encapsulation : ViewEncapsulation.Native
 })
-export class GroupeComponent implements OnInit{
+export class GroupeComponent implements OnInit {
 
+  private groupePosition:GroupePosition = new GroupePosition();
 
-  ngOnInit(): void {
+  @Input()
+  private groupes:Groupe;
 
+  @Input()
+  private nbheures:Number;
+
+  @Input()
+  private duree:Number;
+
+  ngOnInit():void {
+
+    this.groupePosition.setPosition();
 
   }
 

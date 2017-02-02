@@ -2,7 +2,13 @@
 <metadata-component [items]="formationModel.linkmenu"></metadata-component>
 <programme-component [programme]="formationModel.programme"></programme-component>
 <experience-component [experience]="formationModel.experience"></experience-component>
-<groupe-component></groupe-component>
+
+<groupe-component
+      [groupes]="formationModel.groupe"
+      [duree]="formationModel.duree"
+      [nbheures]="formationModel.nbheures">
+</groupe-component>
+
 <formation-scroll-menu></formation-scroll-menu>
 
 

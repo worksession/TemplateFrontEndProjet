@@ -1,4 +1,4 @@
-import { ViewEncapsulation,Component,OnInit,Input } from '@angular/core';
+import {ViewEncapsulation, Component, OnInit, Input} from '@angular/core';
 import {PresentationPosition} from './presentation.position';
 
 @Component({
@@ -7,16 +7,22 @@ import {PresentationPosition} from './presentation.position';
   styleUrls: ['./presentation.style.scss'],
   //encapsulation : ViewEncapsulation.Native
 })
-export class PresentationComponent implements OnInit{
+export class PresentationComponent implements OnInit {
+
+  private presentationPosition:PresentationPosition;
 
   @Input()
   private presentation;
   @Input()
   private titre;
 
-ngOnInit(): void {
+  constructor() {
+    this.presentationPosition = new PresentationPosition();
+  }
+  
+  ngOnInit():void {
 
-    //   this.presentationPosition.Center();
+    this.presentationPosition.setPosition();
 
   }
 

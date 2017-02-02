@@ -10,7 +10,7 @@ footer {
 			position: absolute;
 			top: 60px;
 			font-family: "Raleway";
-			
+
 			color: #FFF;
 		}
 		& span {
@@ -32,13 +32,13 @@ footer {
 	}
 	& .footer_container {
 		width: 1000px;
-		height: 280px;
+		height: 359px;
 		margin: 0 auto;
 		position: relative;
 		top: 100px;
 
 		& .footer_map {
-			height: 280px;
+			height: 330px;
 			width: 480px;
 			float: right;
 
@@ -55,10 +55,11 @@ footer {
 		}
 		& .footer_info {
 			width: 470px;
-			height: 340px;
+			height: 355px;
 			float: left;
 
-			& h3 {
+
+      & h3 {
 				font-size: 17px;
 				color: #FFF;
 				font-family: "Raleway";
@@ -70,7 +71,8 @@ footer {
 			}
 		}
 	}
-}
+
+  }
 .sebm-google-map-container {
 	height: 280px;
 	width: 480px;

@@ -1,6 +1,6 @@
-import { ViewEncapsulation,Component,OnInit,Input } from '@angular/core';
-import {ExperienceJsPlumb} from './experience.jsplumb';
+import {ViewEncapsulation, Component, OnInit, Input, Renderer} from '@angular/core';
 import {ExperiencePosition} from './experience.position';
+import {Experience} from '../../model/formation.model';
 
 @Component({
   selector: 'experience-component',
@@ -8,16 +8,19 @@ import {ExperiencePosition} from './experience.position';
   styleUrls: ['./experience.style.scss'],
   //encapsulation : ViewEncapsulation.Native
 })
-export class ExperienceComponent implements OnInit{
+export class ExperienceComponent implements OnInit {
 
   @Input()
-  private experience;
-  private experienceJsPlumb : ExperienceJsPlumb = new ExperienceJsPlumb()
-  private experiencePosition:ExperiencePosition = new ExperiencePosition();
-  ngOnInit(): void {
+  private experience:Experience;
 
-     this.experienceJsPlumb.DrawGraph();
-     this.experiencePosition.setGraphBackgroundHeight();
+  private experiencePosition:ExperiencePosition = new ExperiencePosition();
+
+
+  ngOnInit():void {
+
+    this.experiencePosition.setPosition();
+
   }
+
 
 }

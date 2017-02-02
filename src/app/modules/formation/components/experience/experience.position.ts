@@ -3,33 +3,65 @@ declare var jQuery:any;
 
 export class ExperiencePosition {
 
+  public setPosition():void {
 
-  setGraphBackgroundHeight():void {
+    this.CenterMeta();
+    this.CenterDownload();
+    this.setTriangePosition();
+
+  }
+
+  public setTriangePosition() {
 
     jQuery(function () {
 
-      var Background = jQuery(".module_tech");
-      var graphBackground = jQuery(".module_tech_experience");
+      let screen_width = jQuery(window).width();
+      let triangle_top_width = jQuery(".tech_tri_top").width()+20;
+      let triangle_bottom_width = jQuery(".tech_tri_bottom").width()+20;
 
-      var max_top = 0;
+      console.log(screen_width)
+      console.log(triangle_top_width)
 
-      jQuery(".module_tech_experience .item").each(function () {
+      jQuery(".tech_tri_top").css("left", (screen_width - triangle_top_width) / 2 + "px")
+      jQuery(".tech_tri_bottom").css("left", (screen_width - triangle_bottom_width) / 2 + "px")
 
-        if (parseInt(jQuery(this).css('top')) > max_top) max_top = parseInt(jQuery(this).css('top'));
 
+    });
+
+  }
+
+  public CenterMeta() {
+
+    jQuery(function () {
+
+      let screen_width = jQuery(window).width();
+
+
+      let tech_meta_icon_width = jQuery(".module_tech_meta").find("span").width();
+      let tech_meta_h3_width = jQuery(".module_tech_meta").find("h3").width();
+
+
+      jQuery(".module_tech_meta").find("span").css("left", (screen_width - 30) / 2 + "px")
+      jQuery(".module_tech_meta").find("h3").css("left", (screen_width - tech_meta_h3_width) / 2 + "px")
+
+    });
+
+  }
+
+  public CenterDownload() {
+
+    jQuery(function () {
+
+      let screen_width = jQuery(window).width();
+      let pdfword_width = jQuery(".pdfword").width();
+
+      jQuery(".pdfword").css({
+        "left": ((screen_width - pdfword_width ) / 2 ) + "px"
       });
 
-      console.log(max_top)
-      max_top += 40;
-
-      jQuery(".module_tech_experience").css("height", max_top + "px");
-
-
-      max_top += 100;
-      max_top += 40;
-
-      jQuery(".module_tech").css("height", max_top + "px");
     });
+
+
   }
 
 

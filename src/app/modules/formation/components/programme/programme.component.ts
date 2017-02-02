@@ -22,9 +22,8 @@ private programmePosition : ProgrammePosition = new ProgrammePosition();
 
    ngOnInit(): void {
 
-
-      this.programmePosition.Center();
-      this.programmePosition.setModuleContainerHeight();
+      this.programmePosition.setPosition();
+     
      }
 
 

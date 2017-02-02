@@ -3,133 +3,180 @@ export class FormationModel {
   private _titre:String;
   private _presentation:String[] = [];
   private _linkmenu:String[];
-  private _programme: Array<Programme> = [];
-  private _experience: Array<Experience> = [];
+  private _experience:Experience;
+  private _programme:Array<Programme> = [];
   private _groupe:Array<Groupe> = [];
-
-  get titre():String{
-      return this.titre;
-      }
-
-  set titre(value:String){
-      this._titre=value;
-      }
-
-  get presentation():String[]{
-      return this._presentation;
-      }
-
-  set presentation(value:String[]){
-      this._presentation=value;
-      }
-
-  get linkmenu():String[]{
-      return this._linkmenu;
-      }
-
-  set linkmenu(value:String[]){
-      this._linkmenu=value;
-      }
-
-  get programme():Array<Programme>{
-      return this._programme;
-      }
-
-  set programme(value:Array<Programme>){
-      this._programme=value;
-      }
-
-  get experience():Array<Experience>{
-      return this._experience;
-      }
-
-  set experience(value:Array<Experience>){
-      this._experience=value;
-      }
-
-  get groupe():Array<Groupe>{
-      return this._groupe;
-      }
-
-  set groupe(value:Array<Groupe>){
-      this._groupe=value;
-      }
-}
-
-export class Programme {
-
-  private _etape : Number;
-  private _titre : String;
-  private _details : String[] = [];
+  private _duree:String;
+  private _nbheures:String;
 
 
-  get etape():Number{
-      return this._etape;
-      }
+  get duree():String {
+    return this._duree;
+  }
 
-  set etape(value:Number){
-      this._etape=value;
-      }
+  set duree(value:String) {
+    this._duree = value;
+  }
 
-  get titre():String{
-      return this._titre;
-      }
+  get nbheures():String {
+    return this._nbheures;
+  }
 
-  set titre(value:String){
-      this._titre=value;
-      }
+  set nbheures(value:String) {
+    this._nbheures = value;
+  }
 
-  get details():String[]{
-      return this._details;
-      }
+  get titre():String {
+    return this._titre;
+  }
 
-  set details(value:String[]){
-      this._details=value;
-      }
+  set titre(value:String) {
+    this._titre = value;
+  }
+
+  get experience():Experience {
+    return this._experience;
+  }
+
+  set experience(value:Experience) {
+    this._experience = value;
+  }
+
+  get presentation():String[] {
+    return this._presentation;
+  }
+
+  set presentation(value:String[]) {
+    this._presentation = value;
+  }
+
+  get linkmenu():String[] {
+    return this._linkmenu;
+  }
+
+  set linkmenu(value:String[]) {
+    this._linkmenu = value;
+  }
+
+  get programme():Array<Programme> {
+    return this._programme;
+  }
+
+  set programme(value:Array<Programme>) {
+    this._programme = value;
+  }
+
+  get groupe():Array<Groupe> {
+    return this._groupe;
+  }
+
+  set groupe(value:Array<Groupe>) {
+    this._groupe = value;
+  }
 }
 
 export class Experience {
 
-  private _titre :String;
-  private _html_id : String;
+  private _titre:String;
+  private _source:String;
+  private _target:String;
+  private _anchor:String;
+  private _style:String;
 
 
-  get titre():String{
-      return this._titre;
-      }
+  get titre():String {
+    return this._titre;
+  }
 
-  set titre(value:String){
-      this._titre=value;
-      }
+  set titre(value:String) {
+    this._titre = value;
+  }
 
-  get html_id():String{
-      return this._html_id;
-      }
+  get style():String {
+    return this._style;
+  }
 
-  set html_id(value:String){
-      this._html_id=value;
-      }
+  set style(value:String) {
+    this._style = value;
+  }
+
+  get source():String {
+    return this._source;
+  }
+
+  set source(value:String) {
+    this._source = value;
+  }
+
+  get target():String {
+    return this._target;
+  }
+
+  set target(value:String) {
+    this._target = value;
+  }
+
+  get anchor():String {
+    return this._anchor;
+  }
+
+  set anchor(value:String) {
+    this._anchor = value;
+  }
+}
+
+export class Programme {
+
+  private _etape:Number;
+  private _titre:String;
+  private _details:String[] = [];
+
+
+  get etape():Number {
+    return this._etape;
+  }
+
+  set etape(value:Number) {
+    this._etape = value;
+  }
+
+  get titre():String {
+    return this._titre;
+  }
+
+  set titre(value:String) {
+    this._titre = value;
+  }
+
+  get details():String[] {
+    return this._details;
+  }
+
+  set details(value:String[]) {
+    this._details = value;
+  }
 }
 
 export class Groupe {
 
   private _nom:String;
-  private _horraire:String[] = [] ;
+  private _seances:String[] = [];
+
+  get nom():String {
+    return this._nom;
+  }
+
+  set nom(value:String) {
+    this._nom = value;
+  }
+
+  get seances():String[] {
+    return this._seances;
+  }
+
+  set seances(value:String[]) {
+    this._seances = value;
+  }
 
 
-    get nom():String {
-      return this._nom;
-    }
-
-  set nom(value:String){
-      this._nom=value;
-      }
-
-  get horraire():String[]{
-      return this._horraire;
-      }
-
-  set horraire(value:String[]){
-      this._horraire=value;
-      }
 }
